@@ -1,2 +1,4 @@
-package com.wocck.spot.entity;public class Playlist {
+package com.wocck.spot.entity;
+
+public class Playlist {
 }

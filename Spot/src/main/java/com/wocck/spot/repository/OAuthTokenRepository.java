@@ -1,2 +1,4 @@
-package com.wocck.spot.repository;public class OAuthRepository {
+package com.wocck.spot.repository;
+
+public class OAuthTokenRepository {
 }

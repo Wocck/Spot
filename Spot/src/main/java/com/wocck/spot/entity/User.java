@@ -1,2 +1,4 @@
-package com.wocck.spot.entity;public class User {
+package com.wocck.spot.entity;
+
+public class User {
 }

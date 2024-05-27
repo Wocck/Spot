@@ -1,2 +1,4 @@
-package com.wocck.spot.repository;public class PlaylistTrackRepository {
+package com.wocck.spot.repository;
+
+public class PlaylistTrackRepository {
 }
