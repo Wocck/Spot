@@ -13,7 +13,7 @@
         }
         .bg {
             /* The image used */
-            background-image: url("https://source.unsplash.com/random/1920x1080?music");
+            background-image: url("https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 
             /* Full height */
             height: 100%;
