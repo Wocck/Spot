@@ -16,13 +16,13 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/", "/login**", "/callback**", "/webjars/**", "/error**").permitAll()
+                                .requestMatchers("/","/login**", "/callback**", "/webjars/**", "/error**").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .oauth2Login(oauth2Login ->
                         oauth2Login
                                 .loginPage("/oauth2/authorization/spotify")
-                                .defaultSuccessUrl("/home")
+                                .defaultSuccessUrl("/home", true)
                                 .failureUrl("/loginFailure")
                 );
         return http.build();
