@@ -1,5 +1,6 @@
 package com.wocck.spot.controller;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
@@ -16,10 +17,14 @@ public class HomeController {
     }
 
     @GetMapping("/home")
-    public String home(Model model, OAuth2AuthenticationToken authentication) {
-        OAuth2User user = authentication.getPrincipal();
-        model.addAttribute("name", user.getAttribute("display_name"));
-        model.addAttribute("email", user.getAttribute("email"));
-        return "home";
+    public String home(Model model, Authentication authentication) {
+        if (authentication instanceof OAuth2AuthenticationToken oauthToken) {
+            OAuth2User user = oauthToken.getPrincipal();
+            model.addAttribute("name", user.getAttribute("display_name"));
+            model.addAttribute("email", user.getAttribute("email"));
+            return "home";
+        } else {
+            return "redirect:/";
+        }
     }
 }
